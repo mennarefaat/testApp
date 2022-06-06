@@ -1,0 +1,17 @@
+.icon{
+    background-color: white;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.parent{
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.child{
+    margin-top: 0;
+    margin-left: 20px;
+}

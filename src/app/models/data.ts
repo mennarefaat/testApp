@@ -1,4 +1,5 @@
 export interface data {
   kind: string;
-  count: string;
+  count: number;
+  expand: false;
 }

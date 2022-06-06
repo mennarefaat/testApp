@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomStyleDirective } from './shared/custom/custom-style.directive';
+import { TreeComponent } from './components/tree/tree.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomStyleDirective
+    CustomStyleDirective,
+    TreeComponent
   ],
   imports: [
     BrowserModule,
