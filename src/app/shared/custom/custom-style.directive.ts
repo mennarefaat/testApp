@@ -11,8 +11,8 @@ import {
   selector: '[appCustomStyle]',
 })
 export class CustomStyleDirective implements OnChanges {
-  @Input('appCustomStyle') color = 'pink';
-  @Input() hcolor = 'blue';
+  @Input('appCustomStyle') color = 'black';
+  @Input() hcolor = 'white';
 
   @HostListener('mouseenter')
   hoverColor() {
