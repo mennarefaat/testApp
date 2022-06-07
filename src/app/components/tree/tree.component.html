@@ -18,11 +18,22 @@
   </div>
   <div class="child" *ngIf="item.expand">
     <ul *ngFor="let elem of item.children">
-      <li hcolor="pink">{{ elem.kind }}</li>
-      <li hcolor="pink">{{ elem.count }}</li>
+      <li (click)="elem.expand = true">{{ elem.kind }}</li>
+      <li>{{ elem.count }}</li>
+      <li
+        (click)="elem.expand = !elem.expand"
+        class="subChild"
+        *ngIf="elem.notes"
+      >
+        Notes
+        <ul *ngFor="let note of elem.notes">
+          <li *ngIf="elem.expand">{{ note }}</li>
+        </ul>
+      </li>
     </ul>
   </div>
 </div>
+
 <label for="pink">Pink</label>
 <input
   type="radio"

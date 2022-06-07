@@ -7,9 +7,12 @@ import { data } from 'src/app/models/data';
   styleUrls: ['./tree.component.css'],
 })
 export class TreeComponent implements OnInit {
-  child: data[] = [{ kind: 'sport', count: 5, expand: false }];
-  parent: any[] = [
-    { title: 'book1', children: [{ kind: 'sport', count: 5 }], expand: false },
+  parent: data[] = [
+    {
+      title: 'book1',
+      children: [{ kind: 'sport', count: 5, notes: ['effective', 'useful'] }],
+      expand: false,
+    },
     { title: 'book2', children: [{ kind: 'sport', count: 8 }], expand: false },
     { title: 'book3', children: [{ kind: 'math', count: 10 }], expand: true },
     { title: 'book4' },

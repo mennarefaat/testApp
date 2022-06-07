@@ -1,5 +1,12 @@
 export interface data {
+  title: string;
+  children?: child[];
+  expand?: boolean;
+}
+
+export interface child {
   kind: string;
   count: number;
-  expand: false;
+  notes?: string[];
+  expand?: boolean;
 }
