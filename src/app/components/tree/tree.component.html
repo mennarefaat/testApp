@@ -1,10 +1,41 @@
-<div *ngFor="let item of parent">
-  <button class="icon" (click)="openTree()">></button>
-  <h3 class="parent">{{ item }}</h3>
-  <div class="child" *ngIf="open">
-    <ul *ngFor="let elem of child">
-      <li>{{ elem.kind }}</li>
-      <li>{{ elem.count }}</li>
+<div *ngFor="let item of parent" appCustomStyle="white" hcolor="{{ color }}">
+  <div class="container">
+    <span
+      class="icon"
+      (click)="item.expand = !item.expand"
+      *ngIf="!item.expand && item.children"
+    >
+      >>
+    </span>
+    <span
+      class="icon"
+      (click)="item.expand = !item.expand"
+      *ngIf="item.expand && item.children"
+    >
+      v
+    </span>
+    <h3 class="parent">{{ item.title }}</h3>
+  </div>
+  <div class="child" *ngIf="item.expand">
+    <ul *ngFor="let elem of item.children">
+      <li hcolor="pink">{{ elem.kind }}</li>
+      <li hcolor="pink">{{ elem.count }}</li>
     </ul>
   </div>
 </div>
+<label for="pink">Pink</label>
+<input
+  type="radio"
+  name="color"
+  value="pink"
+  id="pink"
+  (change)="changeHColor('pink')"
+/>
+<label for="blue">Blue</label>
+<input
+  type="radio"
+  name="color"
+  value="#cedcf2"
+  id="blue"
+  (change)="changeHColor('#cedcf2')"
+/>

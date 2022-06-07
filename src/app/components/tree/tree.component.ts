@@ -7,15 +7,19 @@ import { data } from 'src/app/models/data';
   styleUrls: ['./tree.component.css'],
 })
 export class TreeComponent implements OnInit {
-  parent: string[] = ['Book1', 'Book2'];
   child: data[] = [{ kind: 'sport', count: 5, expand: false }];
-  open = false;
+  parent: any[] = [
+    { title: 'book1', children: [{ kind: 'sport', count: 5 }], expand: false },
+    { title: 'book2', children: [{ kind: 'sport', count: 8 }], expand: false },
+    { title: 'book3', children: [{ kind: 'math', count: 10 }], expand: true },
+    { title: 'book4' },
+  ];
+  color = 'white';
 
   constructor(private _element: ElementRef) {}
 
   ngOnInit(): void {}
-
-  openTree() {
-    this.open = !this.open;
+  changeHColor(value: string) {
+    this.color = value;
   }
 }

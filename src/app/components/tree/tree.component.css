@@ -1,8 +1,12 @@
 .icon{
-    background-color: white;
+    /* background-color: white; */
     display: inline-block;
     border: none;
     cursor: pointer;
+    padding-left: 0;
+    margin-right: 5px;
+}
+.container{
     margin-left: 10px;
 }
 
@@ -13,5 +17,6 @@
 
 .child{
     margin-top: 0;
+    margin-bottom: 0;
     margin-left: 20px;
 }
