@@ -12,5 +12,9 @@ export class TreeService {
     return this.http.get<data[]>(this.baseurl);
   }
 
+  postData(newData: data) {
+    return this.http.post(this.baseurl, newData);
+  }
+
   constructor(private http: HttpClient) {}
 }

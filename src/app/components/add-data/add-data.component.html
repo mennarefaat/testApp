@@ -1,0 +1,14 @@
+<form [formGroup]="newDataValid" #ngForm="ngForm">
+  <label for="title">title: </label>
+  <input
+    id="title"
+    type="text"
+    formControlName="title"
+    [(ngModel)]="newData.title"
+  />
+  <span *ngIf="ngForm.submitted && !newDataValid.valid" class="required"
+    >*required</span
+  >
+
+  <button>Save</button>
+</form>
